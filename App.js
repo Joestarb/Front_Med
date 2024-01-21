@@ -1,57 +1,35 @@
+// App.js
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './screens/Home';
-import Settings from './screens/Settings';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen';
+import TaskApp from './screens/TaskApp';
 
-
-function HomeScreen() {
-  return (
-    <View className="flex justify-center items-center">
-      <Home/>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View className="flex justify-center items-center">
-      <Settings/>
-    </View>
-  );
-}
-
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-      
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === 'Home') {
-            iconName = focused
-              ? 'ios-information-circle'
-              : 'ios-information-circle-outline';
-          } else if (route.name === 'Settings') {
-            iconName = focused ? 'ios-list' : 'ios-list-outline';
-          }
-
-          // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-      })}
-      >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen 
+          options={{
+            title: 'Home',
+            headerStyle: {
+              backgroundColor: '#8761cf', // Personaliza el color del fondo del encabezado
+            },
+            headerTintColor: 'white', // Personaliza el color del texto del encabezado
+          }}
+        name="Home" component={HomeScreen} />
+        <Stack.Screen
+          options={{
+            title: 'TaskApp',
+            headerStyle: {
+              backgroundColor: '#8761cf', // Personaliza el color del fondo del encabezado
+            },
+            headerTintColor: 'white', // Personaliza el color del texto del encabezado
+          }}
+          name="TaskApp" component={TaskApp} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
