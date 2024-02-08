@@ -19,7 +19,7 @@ const RegisterScreen = ({ navigation }) => {
                 <TextInput placeholder="Correo Electrónico" className=" border-2 p-4  rounded-xl" />
                 <TextInput placeholder="Contraseña" className=" border-2 p-4  rounded-xl" />
                 </View>
-                <Text className=" text-center bg-[#1178BD] text-white text-2xl  rounded-2xl  font-semibold p-2" onPress={() => navigation.navigate('Index')}>Registrarse</Text>
+                <Text className=" text-center bg-[#1178BD] text-white text-2xl  rounded-2xl  font-semibold p-2" onPress={() => navigation.navigate('PerfilUsuarioScreen')}>Registrarse</Text>
                 <Text className=" mt-3 text-center font-bold">Ya tienes una cuenta? Inicia sesión</Text>
             </View>
         </View>

@@ -6,15 +6,15 @@ import notificacion from "../../assets/notificacion.png";
 import Privacidad from "../../assets/Privacidad.png";
 import Configcuenta from "../../assets/Configcuenta.png";
 import Logout from '../../assets/Logout.png';
-const IndexScreen = ({ name }) => {
+const PerfilUsuarioScreen = ({ name }) => {
     return (
         <View className="flex-1 p-5 bg-white">
-            <Text className="text-2xl font-bold mb-5">Perfil de usuario                        <Image source={Logout} className="w-8 h-8 my-6" />
+            <Text className="text-2xl font-bold">                                                       <Image source={Logout} className="w-8 h-8" />
             </Text>
 
             {/* Contenedor para la imagen y el texto */}
             <View className="flex flex-col items-center justify-center mb-6">
-                <Image source={rodri} className="w-36 h-36 my-6" />
+                <Image source={rodri} className="w-36 h-36 mb-6" />
                 <Text className="text-2xl font-bold">Rodrigo Bojorquez {name}</Text>
             </View>
 
@@ -69,4 +69,4 @@ const IndexScreen = ({ name }) => {
     );
 };
 
-export default IndexScreen;
+export default PerfilUsuarioScreen;

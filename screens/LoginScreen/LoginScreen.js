@@ -4,7 +4,7 @@ import { View, Text, TextInput } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import loginImg from "../../assets/LoginAssets/login.png";
 
-const HomeScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation }) => {
 
 
 
@@ -24,5 +24,5 @@ const HomeScreen = ({ navigation }) => {
     );
 };
 
-export default HomeScreen;
+export default LoginScreen;
 1
