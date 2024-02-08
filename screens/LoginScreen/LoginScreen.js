@@ -17,8 +17,8 @@ const LoginScreen = ({ navigation }) => {
                 <TextInput placeholder="Correo Electrónico" className=" border-2 p-4  rounded-xl" />
                 <TextInput placeholder="Contraseña" className=" border-2 p-4  rounded-xl" />
                 </View>
-                <Text className=" text-center bg-[#1178BD] text-white text-2xl  rounded-2xl  font-semibold p-2" onPress={() => navigation.navigate('Index')}>Iniciar Sesion</Text>
-                <Text className=" mt-3 text-center font-bold">No tienes cuenta? Create una</Text>
+                <Text className=" text-center bg-[#1178BD] text-white text-2xl  rounded-2xl  font-semibold p-2">Iniciar Sesion</Text>
+                <Text className=" mt-3 text-center font-bold"onPress={() => navigation.navigate('Register')}>No tienes cuenta? Create una</Text>
             </View>
         </View>
     );

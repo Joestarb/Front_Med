@@ -1,6 +1,6 @@
 // screens/HomeScreen.js
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, ScrollView, TextInput } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import loginImg from "../../assets/LoginAssets/login.png";
 
@@ -9,7 +9,7 @@ const RegisterScreen = ({ navigation }) => {
 
 
     return (
-        <View className="  bg-white h-screen  flex items-center"  >
+        <ScrollView contentContainerStyle={{ flexGrow: 1, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }}>
             <View>
                 <Animatable.Image source={loginImg} className=" w-[350] h-[350]" />
                 <Text className=" font-bold text-4xl ml-8 mb-2" >Registro</Text>
@@ -20,11 +20,11 @@ const RegisterScreen = ({ navigation }) => {
                 <TextInput placeholder="Contraseña" className=" border-2 p-4  rounded-xl" />
                 </View>
                 <Text className=" text-center bg-[#1178BD] text-white text-2xl  rounded-2xl  font-semibold p-2" onPress={() => navigation.navigate('PerfilUsuarioScreen')}>Registrarse</Text>
-                <Text className=" mt-3 text-center font-bold">Ya tienes una cuenta? Inicia sesión</Text>
+                <Text className=" mt-3 text-center font-bold mb-5">Ya tienes una cuenta? Inicia sesión</Text>
             </View>
-        </View>
+        </ScrollView> 
     );
 };
-
+ 
 export default RegisterScreen;
 1
