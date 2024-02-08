@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 import Index from './screens/Index/IndexScreen';
-
+import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
           options={{
             title: ' ',
           }}
-          name="Home" component={HomeScreen} />
+          name="Home" component={RegisterScreen} />
         <Stack.Screen
           options={{
             title: ' ', 

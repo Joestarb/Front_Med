@@ -20,7 +20,7 @@ const IndexScreen = ({ name }) => {
 
             {/* Acerca de mi */}
             <View className="mb-8">
-                <Text className="text-xl font-bold mb-3 bg-[#E9E9E9] px-2 py-1 rounded-md">Acerca de mi</Text>
+                <Text className="text-xl font-bold mb-3 bg-[#E9E9E9] px-4 py-1 rounded-md">Acerca de mi</Text>
                 <View className="flex flex-row justify-between">
                     <Text className="text-lg my-1">Informacion personal</Text>
                     <Image source={Mas} />
@@ -45,7 +45,7 @@ const IndexScreen = ({ name }) => {
 
             {/* Preferencias de la app */}
             <View className="mb-8">
-                <Text className="text-xl font-bold mb-3 bg-[#E9E9E9] px-2 py-1 rounded-md">Preferencias de la app</Text>
+                <Text className="text-xl font-bold mb-3 bg-[#E9E9E9] px-4 py-1 rounded-md">Preferencias de la app</Text>
                 <View className="flex flex-row justify-between items-center">
                     <Text className="text-lg my-1 mr-2">
                         <Image source={Configcuenta} className=" mr-2" />   Configuración de Cuenta
