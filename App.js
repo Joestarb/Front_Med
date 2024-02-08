@@ -7,6 +7,7 @@ import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CitaConfirmScreen from './screens/CitaConfirmScreen/CitaConfirmScreen';
 import PerfilDoctor from './screens/PerfilDoctor/PerfilDoctor';
+import HomePage from './screens/HomePage/HomePage';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +29,8 @@ export default function App() {
               iconName = focused ? 'ios-calendar' : 'ios-calendar-outline';
             } else if (route.name === 'Perfil del Doctor') {
               iconName = focused ? 'ios-medical' : 'ios-medical-outline'; // Cambiado a icono de médico
+            } else if (route.name === 'Home Page') {
+              iconName = focused ? 'home' : 'home-outline'; // Icono para la página de inicio
             }
 
             // You can return any component that you like here!
@@ -47,6 +50,7 @@ export default function App() {
         <Tab.Screen name="Register" component={RegisterScreen} />
         <Tab.Screen name="Cita Agendada" component={CitaConfirmScreen} />
         <Tab.Screen name="Perfil del Doctor" component={PerfilDoctor} />
+        <Tab.Screen name="Home Page" component={HomePage} />
       </Tab.Navigator>
     </NavigationContainer>
   );
