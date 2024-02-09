@@ -13,7 +13,7 @@ const HomePage = () => {
     };
 
     return (
-        <ScrollView className="bg-white h-screen">
+        <ScrollView className="bg-white pt-12 h-screen">
             <View className="items-center bg-white">
                 <View className="flex flex-row items-center bg-white justify-around">
                     <Image source={rodri} className="w-24 h-24 mr-4" />

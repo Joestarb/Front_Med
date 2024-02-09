@@ -9,6 +9,7 @@ import CitaConfirmScreen from './screens/CitaConfirmScreen/CitaConfirmScreen';
 import PerfilDoctor from './screens/PerfilDoctor/PerfilDoctor';
 import HomePage from './screens/HomePage/HomePage';
 import MakeAppointment from './screens/MakeAppointment/MakeAppointment';
+import ConsultarCitas from './screens/ConsultarCitas/ConsultarCitas';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,8 +33,10 @@ export default function App() {
               iconName = focused ? 'ios-medical' : 'ios-medical-outline'; // Cambiado a icono de médico
             } else if (route.name === 'Home Page') {
               iconName = focused ? 'home' : 'home-outline'; // Icono para la página de inicio
+            } else if (route.name === 'ConsultarCitas') {
+              iconName = 'settings'; // Cambiar a 'settings' para utilizar un icono de configuración
             }
-
+      
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
@@ -53,6 +56,7 @@ export default function App() {
         {/* <Tab.Screen name="Cita Agendada" component={CitaConfirmScreen} /> */}
         <Tab.Screen name="Perfil del Doctor" component={PerfilDoctor} />
         <Tab.Screen name="Home Page" component={HomePage} />
+        <Tab.Screen name="ConsultarCitas" component={ConsultarCitas} />
       </Tab.Navigator>
     </NavigationContainer>
   );

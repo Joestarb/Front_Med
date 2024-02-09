@@ -4,7 +4,7 @@ import { View, ScrollView, Image, Text } from 'react-native';
 const PerfilDoctor = () => {
     return (
         <ScrollView style={{ marginBottom: 5 }}>
-            <View className="flex-1 bg-white h-screen flex items-center pt-5">
+            <View className="flex-1 bg-white h-screen flex items-center mt-10 pt-5">
                 <View className="w-5/6 flex-row items-center justify-center">
                     <Image source={require('../../assets/Doctor.png')} className="w-32 h-32 mb-5" />
                     <View className="ml-3">
