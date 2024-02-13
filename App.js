@@ -18,6 +18,7 @@ import MakeAppointment from "./screens/MakeAppointment/MakeAppointment";
 import ConsultarCitas from "./screens/ConsultarCitas/ConsultarCitas";
 
 // RUTAS DOCTORES
+import HomeDoctor from "./screens/HomeDoctor/HomeDoctor";
 
 const Tab = createBottomTabNavigator();
 
@@ -43,8 +44,10 @@ function App({ rol, isAuth }) {
               iconName = focused ? "ios-medical" : "ios-medical-outline"; // Cambiado a icono de médico
             } else if (route.name === "Home Page") {
               iconName = focused ? "home" : "home-outline"; // Icono para la página de inicio
-            } else if (route.name === "ConsultarCitas") {
+            } else if (route.name === "Consultar Citas") {
               iconName = "settings"; // Cambiar a 'settings' para utilizar un icono de configuración
+            } else if (route.name === "Home doc") {
+              iconName = "home"
             }
 
             // You can return any component that you like here!
@@ -54,6 +57,7 @@ function App({ rol, isAuth }) {
           inactiveTintColor: "gray",
           tabBarStyle: {
             display: "flex",
+            justifyContent: "center"
           },
           tabBarShowLabel: false,
           headerShown: false,
@@ -81,7 +85,7 @@ function App({ rol, isAuth }) {
             {/* DOCTOR */}
             {rol === "doctor" && (
               <>
-            
+                <Tab.Screen name="Home doc" component={HomeDoctor} />
               </>
             )}
           </>
@@ -91,4 +95,4 @@ function App({ rol, isAuth }) {
   );
 }
 
-export default () => <App rol={"patient"} isAuth={true} />;
+export default () => <App rol={"doctor"} isAuth={true} />;
