@@ -3,7 +3,7 @@ import { View, Text, Image } from 'react-native';
 import rodri from "../../assets/rodri.png";
 import Mas from "../../assets/Mas.png";
 import Logout from '../../assets/Logout.png';
-const PerfilUsuarioScreen = ({ name }) => {
+const MenuDoctorScreen = ({ name }) => {
     return (
         <View className="flex-1 p-5 bg-white">
             <Text className="text-2xl font-bold">                                                       <Image source={Logout} className="w-8 h-8" />
@@ -23,24 +23,24 @@ const PerfilUsuarioScreen = ({ name }) => {
                     <Image source={Mas} />
                 </View>
                 <View className="flex flex-row justify-between">
-                    <Text className="text-lg my-1">Contacto</Text>
+                    <Text className="text-lg my-1">Titulos Adquiridos</Text>
                     <Image source={Mas} />
                 </View>
                 <View className="flex flex-row justify-between">
-                    <Text className="text-lg my-1">Seguro Medico</Text>
+                    <Text className="text-lg my-1">Experiencia</Text>
                     <Image source={Mas} />
                 </View>
                 <View className="flex flex-row justify-between">
-                    <Text className="text-lg my-1">Historial Medico</Text>
+                    <Text className="text-lg my-1">Clinica Asignada</Text>
                     <Image source={Mas} />
                 </View>
                 <View className="flex flex-row justify-between">
                     <Text className="text-lg my-1">Historial de citas</Text>
                     <Image source={Mas} />
                 </View>
-            </View>
+            </View>            
         </View>
     );
 };
 
-export default PerfilUsuarioScreen;
+export default MenuDoctorScreen;

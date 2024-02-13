@@ -19,6 +19,7 @@ import ConsultarCitas from "./screens/ConsultarCitas/ConsultarCitas";
 
 // RUTAS DOCTORES
 import HomeDoctor from "./screens/HomeDoctor/HomeDoctor";
+import EditarTitulo from "./screens/EditarTituloDoctor/EditarTitulo";
 
 const Tab = createBottomTabNavigator();
 
@@ -63,7 +64,7 @@ function App({ rol, isAuth }) {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="Login" component={LoginScreen} />
+        <Tab.Screen name="Login" component={EditarTitulo} />
         <Tab.Screen name="Register" component={RegisterScreen} />
 
         {isAuth && (
