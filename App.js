@@ -16,6 +16,8 @@ import CitaConfirmScreen from "./screens/CitaConfirmScreen/CitaConfirmScreen";
 import PerfilDoctor from "./screens/PerfilDoctor/PerfilDoctor";
 import MakeAppointment from "./screens/MakeAppointment/MakeAppointment";
 import ConsultarCitas from "./screens/ConsultarCitas/ConsultarCitas";
+import ClinicData from "./screens/ClinicData/ClinicData";
+import CitasAgendadas from "./screens/CitasAgendadas/CitasAgendadas";
 
 // RUTAS DOCTORES
 
@@ -61,6 +63,7 @@ function App({ rol, isAuth }) {
       >
         <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Register" component={RegisterScreen} />
+        <Tab.Screen name="Citasagendadas" component={CitasAgendadas} />
 
         {isAuth && (
           <>
