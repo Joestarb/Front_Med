@@ -1,5 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -16,13 +17,26 @@ import CitaConfirmScreen from "./screens/CitaConfirmScreen/CitaConfirmScreen";
 import PerfilDoctor from "./screens/PerfilDoctor/PerfilDoctor";
 import MakeAppointment from "./screens/MakeAppointment/MakeAppointment";
 import ConsultarCitas from "./screens/ConsultarCitas/ConsultarCitas";
+import InfoPersonal from "./screens/infoPersonal/infoPersonal";
 
 // RUTAS DOCTORES
 import HomeDoctor from "./screens/HomeDoctor/HomeDoctor";
 import EditarTitulo from "./screens/EditarTituloDoctor/EditarTitulo";
 
-const Tab = createBottomTabNavigator();
+// Importar tus pantallas aquí
 
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator(); // Crear un navegador de stack
+
+// Definir un navegador de stack separado para las pantallas que requieren navegación
+function PerfilUsuarioStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="PerfilUsuario" component={PerfilUsuarioScreen} />
+      <Stack.Screen name="InfoPersonal" component={InfoPersonal} />
+    </Stack.Navigator>
+  );
+}
 function App({ rol, isAuth }) {
   return (
     <NavigationContainer>
@@ -69,16 +83,13 @@ function App({ rol, isAuth }) {
 
         {isAuth && (
           <>
-            <Tab.Screen
-              name="PerfilUsuarioScreen"
-              component={PerfilUsuarioScreen}
-            />
+            <Tab.Screen name="PerfilUsuarioScreen" component={PerfilUsuarioStack} />
             {/* PATIENT */}
             {rol === "patient" && (
               <>
                 <Tab.Screen name="Agendar" component={MakeAppointment} />
                 {/* <Tab.Screen name="Cita Agendada" component={CitaConfirmScreen} /> */}
-                <Tab.Screen name="Perfil del Doctor" component={PerfilDoctor} />
+                  {/* <Tab.Screen name="Perfil del Doctor" component={PerfilDoctor} /> */}
                 <Tab.Screen name="Home Page" component={HomePage} />
                 <Tab.Screen name="Consultar Citas" component={ConsultarCitas} />
               </>
