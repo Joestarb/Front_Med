@@ -22,6 +22,7 @@ import InfoPersonal from "./screens/infoPersonal/infoPersonal";
 // RUTAS DOCTORES
 import HomeDoctor from "./screens/HomeDoctor/HomeDoctor";
 import EditarTitulo from "./screens/EditarTituloDoctor/EditarTitulo";
+import EditarExp from "./screens/EditarExpDoctor/EditarExp";
 
 // Importar tus pantallas aquí
 
@@ -78,7 +79,7 @@ function App({ rol, isAuth }) {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="Login" component={EditarTitulo} />
+        <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Register" component={RegisterScreen} />
 
         {isAuth && (
